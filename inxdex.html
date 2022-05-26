@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>todo list</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700&family=Noto+Sans&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="./css/reset.css">
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+   <header class="header">
+      <div class="container">
+         <div class="left__content">
+            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M13.1244 13.25L7.06218 2L1 13.25" stroke="#55B8FF" stroke-width="1.5" />
+               <path d="M4.82598 12L7.06218 7.64263L9.29838 12H4.82598Z" stroke="#55B8FF" stroke-width="1.5" />
+            </svg>
+            <a href="#">Avtograph</a>
+         </div>
+         <div class="right__content">
+            <button class="email"></button>
+            <button class="users"></button>
+         </div>
+      </div>
+   </header>
+
+   <main class="main">
+      <div class="container">
+         <div class="title">
+            <h6>Avtograph TODO list</h6>
+            <div class="sorting">
+               <p class="sorting__header">
+                  Выполненные
+               </p>
+               <div class="sorting__list">
+                  <label class="item" data-value="all">
+                     <input type="radio" name="sorting">
+                     <p>Все</p>
+                     <span></span>
+                  </label>
+                  <label class="item" data-value="completed">
+                     <input type="radio" name="sorting">
+                     <p>Выполненные</p>
+                     <span></span>
+                  </label>
+                  <label class="item" data-value="in_work">
+                     <input type="radio" name="sorting">
+                     <p>В работе</p>
+                     <span></span>
+                  </label>
+               </div>
+            </div>
+         </div>
+
+         <div class="input__task">
+            <input type="text" placeholder="Поле ввода">
+            <button class="add__task"></button>
+         </div>
+
+         <div class="list__task"></div>
+      </div>
+   </main>
+
+   <div class="popup ">
+      <div class="users__popup ">
+         <div class="user__item">
+            <img
+               src="data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 0C20.1695 0 26 5.83063 26 13C26 20.1694 20.1694 26 13 26C5.83063 26 0 20.1694 0 13C0 5.83063 5.83063 0 13 0ZM13 1.73329C6.76749 1.73329 1.73305 6.76731 1.73305 13.0002C1.73305 15.1098 2.30827 17.0828 3.31286 18.7691C5.69289 16.1132 9.15636 14.4447 12.9999 14.4447C16.8477 14.4447 20.3078 16.1165 22.6869 18.7782C23.6941 17.0904 24.2667 15.1126 24.2667 13.0004C24.2667 6.76792 19.2329 1.73329 13 1.73329ZM13 2.59994C16.0212 2.59994 18.4889 5.06763 18.4889 8.08884C18.4889 11.1101 16.0212 13.5777 13 13.5777C9.97878 13.5777 7.5111 11.1101 7.5111 8.08884C7.5111 5.06763 9.97878 2.59994 13 2.59994Z' fill='%2355B8FF'/%3E%3C/svg%3E%0A"
+               alt="img">
+            <p class="name">USER</p>
+         </div>
+         <p class="close"></p>
+      </div>
+   </div>
+
+
+   <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>

@@ -4,3 +4,474 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 46px;
+}
+
+.header .left__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.header .left__content a {
+  font: 700 13px/13px "League Spartan";
+  text-transform: uppercase;
+}
+
+.header .right__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.header .right__content .email,
+.header .right__content .users {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header .right__content .email {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_3_12-658813)'%3E%3Cg clip-path='url(%23clip1_3_12-632391)'%3E%3Cpath d='M8.41611 7.66666L15.0833 4.27144V2.78829C15.0833 2.61893 15.0833 2.48148 15.0833 2.48148H1.75C1.75 2.48148 1.75001 2.61893 1.75001 2.78829V4.29414L8.41611 7.66666Z' fill='%23171E29'/%3E%3Cpath d='M8.53278 8.80425C8.495 8.82326 8.45555 8.83316 8.41667 8.83316C8.37833 8.83316 8.33889 8.82326 8.30111 8.80533L1.75 5.4661V12.8519C1.75 12.8519 1.87444 12.8519 2.02778 12.8519H14.8056C14.9583 12.8519 15.0833 12.8519 15.0833 12.8519V5.44446L8.53278 8.80425Z' fill='%23171E29'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3_12-658813'%3E%3Crect width='15' height='15' fill='white' transform='translate(0.75 0.5)'/%3E%3C/clipPath%3E%3CclipPath id='clip1_3_12-632391'%3E%3Crect width='13.3333' height='13.3333' fill='white' transform='translate(1.75 1)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.header .right__content .users {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.87474 7.01782C3.64652 7.01782 1.02008 10.0195 1.02008 13.7089C1.02008 13.8694 1.13413 13.9998 1.27464 13.9998H12.4749C12.6154 13.9998 12.7294 13.8694 12.7294 13.7089C12.7294 10.0195 10.103 7.01782 6.87474 7.01782Z' fill='%23171E29'/%3E%3Cpath d='M6.87489 6.40011C8.42132 6.40011 9.67494 4.9674 9.67494 3.20006C9.67494 1.43271 8.42132 0 6.87489 0C5.32847 0 4.07484 1.43271 4.07484 3.20006C4.07484 4.9674 5.32847 6.40011 6.87489 6.40011Z' fill='%23171E29'/%3E%3C/svg%3E%0A");
+}
+
+.main {
+  background: #f2f2f2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 46px);
+}
+
+.main .title {
+  font-family: "League Spartan", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 35px 0 26px;
+}
+
+.main .title h6 {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+}
+
+.main .title .sorting {
+  position: relative;
+  cursor: pointer;
+}
+
+.main .title .sorting.active .sorting__header::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.45754 0.66272L-1.94845e-07 5.12026L1.35084 6.66459L4.5028 3.51263L7.65476 6.66459L9.07 5.20449L4.61246 0.746943L4.57711 0.782289L4.45754 0.66272Z' fill='%23171E29'/%3E%3C/svg%3E%0A");
+}
+
+.main .title .sorting.active .sorting__list {
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  height: auto;
+}
+
+.main .title .sorting__header {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+  position: relative;
+  padding-right: 16px;
+  -webkit-transition: -webkit-transform 3s linear;
+  transition: -webkit-transform 3s linear;
+  transition: transform 3s linear;
+  transition: transform 3s linear, -webkit-transform 3s linear;
+}
+
+.main .title .sorting__header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.45754 6.33728L-1.94845e-07 1.87974L1.35084 0.335413L4.5028 3.48737L7.65476 0.335413L9.07 1.79551L4.61246 6.25306L4.57711 6.21771L4.45754 6.33728Z' fill='%23171E29'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+
+.main .title .sorting__list {
+  position: absolute;
+  top: 23px;
+  right: 0px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  width: 135px;
+  height: 0px;
+  background-color: white;
+  padding: 15px 20px;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+
+.main .title .sorting__list label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.main .title .sorting__list label input {
+  display: none;
+}
+
+.main .title .sorting__list label input:checked ~ p {
+  font-weight: 700;
+}
+
+.main .title .sorting__list label input:checked ~ span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main .title .sorting__list label p {
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+.main .title .sorting__list label span {
+  width: 10px;
+  height: 9px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.8176 8.5L10 2.31356L8.18762 0.5L3.81741 4.87306L1.81227 2.86662L0 4.69303L3.8176 8.5Z' fill='%23171E29'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+
+.main .input__task {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.main .input__task input {
+  font-family: "League Spartan", sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+  font-weight: 300;
+  width: 100%;
+  border: none;
+  padding: 14px 55px 14px 16px;
+}
+
+.main .input__task input::-webkit-input-placeholder {
+  color: #bac2cd;
+}
+
+.main .input__task input:-ms-input-placeholder {
+  color: #bac2cd;
+}
+
+.main .input__task input::-ms-input-placeholder {
+  color: #bac2cd;
+}
+
+.main .input__task input::placeholder {
+  color: #bac2cd;
+}
+
+.main .input__task input:focus {
+  outline: 1px solid #55b8ff;
+}
+
+.main .input__task .add__task {
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #55b8ff;
+  cursor: pointer;
+}
+
+.main .input__task .add__task::before, .main .input__task .add__task::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.main .input__task .add__task::before {
+  width: 2.5px;
+  height: 13px;
+}
+
+.main .input__task .add__task::after {
+  height: 2.5px;
+  width: 13px;
+}
+
+.main .list__task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.main .list__task .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.main .list__task .item label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-right: 5px;
+}
+
+.main .list__task .item label input {
+  display: none;
+}
+
+.main .list__task .item label input:checked ~ .checkbox::before {
+  opacity: 1;
+}
+
+.main .list__task .item label input:checked ~ p {
+  text-decoration: line-through;
+}
+
+.main .list__task .item label .checkbox {
+  position: relative;
+  min-width: 13px;
+  height: 13px;
+  border: 2px solid #bfc6d0;
+}
+
+.main .list__task .item label .checkbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: #55b8ff;
+  opacity: 0;
+  transition: 0.3s opacity;
+  -webkit-transition: 0.3s opacity;
+  -moz-transition: 0.3s opacity;
+  -ms-transition: 0.3s opacity;
+  -o-transition: 0.3s opacity;
+}
+
+.main .list__task .item .remove-btn {
+  position: relative;
+  width: 23px;
+  height: 23px;
+  margin-left: auto;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='9' viewBox='0 0 8 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.31229 4.01006L0 1.69776L1.69776 0L4.01006 2.31229L6.22525 0.0970967L7.92302 1.79486L5.70782 4.01006L7.9229 6.22514L6.22514 7.9229L4.01006 5.70782L1.69788 8.02L0.000116683 6.32224L2.31229 4.01006Z' fill='%2389919A'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .list__task .plug {
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 20;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(41, 40, 40, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup .users__popup {
+  position: relative;
+  max-width: 207px;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.popup .users__popup .user__item {
+  font-family: "League Spartan", sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 13px;
+}
+
+.popup .users__popup .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 23px;
+  height: 23px;
+  margin-left: auto;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='9' viewBox='0 0 8 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.31229 4.01006L0 1.69776L1.69776 0L4.01006 2.31229L6.22525 0.0970967L7.92302 1.79486L5.70782 4.01006L7.9229 6.22514L6.22514 7.9229L4.01006 5.70782L1.69788 8.02L0.000116683 6.32224L2.31229 4.01006Z' fill='%2389919A'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+}
